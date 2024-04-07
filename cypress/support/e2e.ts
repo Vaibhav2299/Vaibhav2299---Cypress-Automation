@@ -14,7 +14,33 @@
 // ***********************************************************
 
 // Import commands.js using ES2015 syntax:
-import './commands'
+
+
+
+//CANDIDATE COMMANDS HERE
+import './candidates/candidatelistcommands';
 
 // Alternatively you can use CommonJS syntax:
 // require('./commands')
+// import addContext from 'mochawesome/addContext';
+import 'cypress-mochawesome-reporter/register';
+import './commands';
+require('@cypress/skip-test/support');
+// import 'cypress-if';
+import 'cypress-real-events';
+
+// Cypress.on('test:after:run', (test, runnable) => {
+//   if (test.state === 'failed') {
+//     const screenshot = `assets/${Cypress.spec.name}/${runnable.parent.title} -- ${test.title} (failed).png`;
+//     addContext({ test }, screenshot);
+//   }
+// });
+
+const registerCypressGrep = require('@cypress/grep')
+registerCypressGrep()
+
+Cypress.on('uncaught:exception', (err, runnable) => {
+  return false;
+});
+const chaiSorted = require('chai-sorted');
+chai.use(chaiSorted);
