@@ -18,7 +18,6 @@
 
 
 //CANDIDATE COMMANDS HERE
-import './candidates/candidatelistcommands';
 
 // Alternatively you can use CommonJS syntax:
 // require('./commands')
@@ -42,5 +41,6 @@ registerCypressGrep()
 Cypress.on('uncaught:exception', (err, runnable) => {
   return false;
 });
+
 const chaiSorted = require('chai-sorted');
 chai.use(chaiSorted);

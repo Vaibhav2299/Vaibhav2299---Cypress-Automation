@@ -17,11 +17,13 @@
     "@cypress/grep": "^4.0.1",
     "@cypress/skip-test": "^2.6.1",
     "@types/mocha": "^10.0.6",
+    "chai-sorted": "^0.2.0",
     "cross-env": "^7.0.3",
     "cypress-drag-drop": "^1.1.1",
     "cypress-each": "^1.14.0",
     "cypress-file-upload": "^5.0.8",
     "cypress-localstorage-commands": "^2.2.5",
-    "cypress-mochawesome-reporter": "^3.8.2"
+    "cypress-mochawesome-reporter": "^3.8.2",
+    "cypress-real-events": "^1.12.0"
   }
 }
